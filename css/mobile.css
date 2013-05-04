@@ -1,0 +1,570 @@
+/* ------------------------------------------------------- 
+Responsif - a responsive theme for SMF
+Based on Curve Theme
+Author: Tami Weiss
+Email: tamiweiss2010@gmail.com
+Web: http://www.twicethink.com
+Repository for Responsif: https://github.com/tamiweiss/responsif
+If you enjoy this theme, paypal donations to the above email address appreciated!
+This is a work in progress, but posted due to popular demand. I appologize for the mess, I will work to clean it up as I am able.
+------------------------------------------------------- */
+
+/* mobile style sheet for smaller handheld devices (phones, etc) */
+
+	ul#MainNav {
+		display: block;
+		
+	}
+	ul#MainNav > li {
+		margin: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 6px 0;
+		
+	}
+	
+	ul#MainNav > li:nth-child(odd) {float: left;width: 50%; text-align: left; clear: left;}
+	ul#MainNav > li:nth-child(even) {float: right; width: 50%; text-align: right; clear: right;}
+	ul#MainNav > li:nth-child(odd):last-child {float: none; clear: both; width: 100%; text-align: center; }
+	
+	h1, h2, h3 {
+		font-size: 18px;
+		padding: 0.5em;}
+
+	ul#MainNav > li > a {}
+	
+
+	
+	div#Branding img#Logo {
+	margin: -34px auto 0;
+	width: 98%;
+	height: auto;
+	
+}
+
+	
+
+	iframe {
+		margin-top: 14px;
+	}
+	
+	/*body { overflow: hidden; background: green;}*/
+	
+	iframe[width="600"] {
+		width: 100%;
+		height: auto;
+	}
+	
+	ul#MainNav li#Forums {
+		background-image: none;
+	}
+	
+/*main page and repeating containers */
+div.ForumContainer,
+div.SectionContainer {
+	padding: 0;
+	background: none;
+}
+
+div#wrapper {
+	margin: 0;
+	padding: 0.5em 0;
+	/*min-width: 764px;*/
+	background: #f8f8f8;
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	max-width: 100%;
+}
+
+div#wrapper[style] {
+	width: 100% !important;
+}
+
+h2.SectionName,
+h2.ForumName {
+	font-size: 1.8em;
+	text-align: center;
+	width: 100%;
+	padding: 12px 0;
+	background: #666;
+	color:#fff;
+	line-height: 120%;
+}
+
+table.TopicList,
+table.Forum {
+	border: solid #666;
+	border-width: 1px 0;
+	}
+	
+table.TopicList h3,
+table.Forum h3 {
+	padding-left: 0;
+}
+
+table.Forum tbody tr,
+table.TopicList tbody tr  {
+	display:block;
+	position: relative;
+	background: url(../images/buttons/arrow.png) center right no-repeat, url(../images/tablebottomdots.gif) bottom left repeat-x;
+	background-size: 55px 55px, 4px 2px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-right: 30px;
+}
+
+table.Forum tbody tr.whos_viewing,
+table.Forum tbody tr[id$=children] {
+	background: url(../images/tablebottomdots.gif) bottom left repeat-x;
+}
+
+table.TopicList tbody tr:last-child,
+table.Forum tbody tr:last-child  {
+	background: url(../images/buttons/arrow.png) center right no-repeat;
+	background-size: 55px 55px;
+}
+
+
+table.TopicList td,
+table.Forum td {
+	display:inline-block;
+}
+
+
+
+table.TopicList thead,
+table.Forum thead {
+	display: none;
+}
+
+table.TopicList tr > td span.FromBoard,
+table.Forum tr > td p.desc,
+table.TopicList span.TopicPoster { display: none;}
+
+table.TopicList tr > td.TopicName,
+table.Forum tr > td.ForumName,
+table#TopicList.Forum tr > td.TopicName {
+	width: 100%;
+	padding: 8px 50px 0 20px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+	
+
+table.TopicList tr > td.Posts,
+table.Forum tr > td.Topics,
+table.Forum tr > td.Replies {
+	width: auto;
+	padding: 0 6px 8px 20px;
+	font-style: italic;
+}
+table.TopicList tr > td.Posts span:before {
+	content: ' Posts';
+}
+table.Forum tr > td.Topics span:before {
+	content: ' Topics';
+}
+table.Forum tr > td.Replies span:before {
+	content: ' Replies';
+}
+
+
+table.TopicList tr > td.Views,
+table.Forum tr > td.Views,
+table.Forum tr > td.Posts,
+table.Forum a span.TopicPoster,
+span.TopicPoster  {
+	display: none;
+	
+}
+
+
+table.TopicList tr > td.LastPost,
+table.Forum tr > td.LastPost {
+	width: 60%;
+	padding: 0 6px 8px;
+	font-style: italic;
+}
+
+table.TopicList tr > td.LastPost > span:first-child:before,
+table.Forum tr > td.LastPost > span:first-child:before {
+	content: 'Last updated ';
+}
+
+table.TopicList tr > td.LastPost a,
+table.Forum tr > td.LastPost a{
+	color: #666;
+}
+
+table.Forum td.LastPost span.Author,
+table.TopicList td.LastPost span.Author {
+	display: inline;
+}
+
+
+div#TopicWrapper div.SectionContainer {
+	margin-bottom: 0;
+}
+div#TopicWrapper ul.buttonlist {
+	margin: 0;
+}
+
+div#TopicWrapper h1 {
+	text-align: center;
+	font-size: 1.6em;
+}
+
+table#TopicList.Forum tr.Pages > td {
+	display: block;
+}
+
+p.OverallDesc { padding: 12px;}
+
+#quickReplyOptions form textarea {
+	height: 8em;
+	width: 94%;
+	max-width: 94%;
+	min-width: 80%;
+	margin: 0.25em auto 1em;
+	display: block;
+}
+
+#quickReplyOptions .roundframe {
+	padding: 0;
+	border-width: 0;
+}
+
+
+ul.buttonlist li.active {
+	width: 100%;
+	padding:0;
+
+}
+
+ul.buttonlist li a.active {
+	width: 100%;
+	border-width: 1px 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	-ms-border-radius: 0;
+	border-radius: 0;
+	display: block;
+	text-align: center;
+	margin:0;
+	padding: 0.5em 0;
+}
+
+div#upper_section {
+	padding: 0;
+	margin-bottom: 1em;
+	position: relative;
+|}
+
+div#upper_section div#User span.corner {
+	display: none;	
+}
+
+div#upper_section div#User {
+	width: 100%;
+	padding: 0.4em 2.5em 0.2em;
+	border: solid #ccc;
+	border-width: 1px 0;
+	background: #fff;
+	box-shadow: none;
+	position: static;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+div#GuestWelcome {
+	float: none;
+	width:100%;
+	margin: 0.5em 0.2em;
+	padding-top: 0;
+}
+
+div#GuestWelcome > p {
+	line-height: 140%;
+	font-family: Georgia, Verdana, Arial, Sans-Serif;
+	font-style: italic;
+	text-align: center;
+	
+}
+
+form#guest_form input,
+form#guest_form input[type="text"],
+form#guest_form input[type="password"] {
+	width: 94%;
+	margin:0 0 1em 0;
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 6px;
+	margin:0 auto 1em;
+}
+
+form#guest_form select { padding: 6px; width: 94%; margin:0 auto 1em; display: block;}
+
+form#guest_form select > option {padding: 4px;}
+
+div#upper_section div#User div.avatar {
+	float: left;
+	margin: 0 1em 0 0;
+	padding: 0;
+	width: 50px;
+	height: 50px;
+}
+
+div#upper_section div#User div.avatar img{
+	float: left;
+	margin: 0 1em 1em 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #999;
+}
+
+div#upper_section div#User ul.UserBar {
+	margin: 0;
+	padding: 0.2em 0 0.2em 0.5em;
+}
+	
+
+div#upper_section div#User ul.UserBar li {
+	margin-bottom: 2px;
+	display: inline-block;
+	line-height: 120%;
+}
+div#upper_section div#User ul.UserBar li.greeting {
+	display: block;
+	font-family: Georgia, Verdana, Arial, Sans-Serif;
+	font-style: italic;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+div#upper_section div#User ul.UserBar li.greeting:after,
+div#upper_section div#User ul.UserBar li:last-child:after {
+	content: '';
+}
+div#upper_section div#User ul.UserBar li:after {
+	content: ' |';
+	color: #ccc;
+}
+
+div#upper_section div#SearchNews p {
+	display: inline;
+}
+div#upper_section div#SearchNews form#search_form {
+	padding: 1em 0;
+}
+/*
+div#upper_section div#SearchNews form#search_form input[type="text"],
+div#upper_section div#SearchNews form#search_form input[type="submit"] {
+	float: none;
+	width: 90%;
+	margin:0 auto;
+	display: block;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	
+}*/
+
+
+div#upper_section div#SearchNews div#SiteNews > h4 {
+	font-weight: bold;
+	font-size: 1.2em;
+	font-style: italic;
+	font-family: Georgia, Verdana, Arial, Sans-Serif;
+}
+div#upper_section div#SearchNews { padding: 0.5em}
+
+
+div#post_header dt.SubjectLabel {
+	display: block;
+	float: none;
+}
+
+#post_header dd.SubjectInput {
+	float: none;
+
+}
+
+#post_header dd.SubjectInput > input {
+	margin-top: 0.3em;
+	width: 94%;
+	margin: 0.3em auto 0;
+	display: block;
+}
+
+
+form#postmodify .roundframe {
+padding: 0 1em;
+border: 0;
+}
+#bbcBox_message div img {
+margin: 0.5em;
+vertical-align: top;
+}
+
+div#smileyBox_message img {
+margin: 0.5em;
+}
+
+
+p#shortcuts {display: none;}
+
+/* profile */
+
+div#profileview h1 {
+	border-bottom: 1px dotted #aaa;
+}
+div#basicinfo {
+	float: none;
+	width: 100%;
+}
+div#detailedinfo {
+	float: none;
+	width: 100%;
+}
+
+div#basicinfo h2 {
+	padding-bottom: 0;
+}
+
+div#basicinfo h2 span.position { display: inline; }
+div#basicinfo h2 span.position:before {content: '(';}
+div#basicinfo h2 span.position:after {content: ')';}
+
+div#basicinfo ul.reset {
+	padding: 0 1em;
+}
+
+div#basicinfo ul.reset li{
+	display: inline-block;
+}
+
+div#detailedinfo dl.UserAttributes, 
+div#tracking dl.UserAttributes {
+	clear: right;
+	overflow: auto;
+	margin: 0 0 1em 0;
+	padding: 0 0 1em 0;
+	border-bottom: 1px #ccc solid;
+}
+div#detailedinfo dt, 
+div#tracking dt {
+	width: 100%;
+	float: none;
+	margin: 0 0 0.1em 0;
+	padding: 0;
+	font-weight: bold;
+	clear: both;
+}
+div#detailedinfo  dd,
+div#tracking div.content dd {
+	width: 100%;
+	float: none;
+	margin: 0 0 0.5em 0;
+	padding: 0;
+}
+
+div#basicinfo span#userstatus {
+    clear: both;
+    display: inline;
+	padding-left: 1em;
+}
+p#infolinks {
+	text-align: center;
+	padding-bottom: .5em;
+}
+
+p#infolinks a {display: inline;}
+p#infolinks a:after { content: '| ';}
+p#infolinks a:last-child:after { content: '';}
+
+
+/* Styles for the login areas.
+------------------------------------------------------- */
+.login
+{
+	width: 100%;
+	margin: 0 auto 12px;
+}
+
+.login dl {
+	width: 90%;
+	margin: auto;
+	
+}
+.login dt {
+	text-align: left;
+	margin: 12px auto 6px;
+	width: 60%;
+}
+
+.login dd {
+	margin: 12px 6px 6px;
+	width: 25%;
+}
+
+.login dt.Password,
+.login dt.UserName,
+.login dd.Password,
+.login dd.UserName {
+	margin: 12px auto 6px;
+	width: 90%;
+	padding: 0.1em;
+}
+
+.login .Password input,
+.login .UserName input {
+	width: 100%;	
+	margin: 0;
+}
+
+.login dt.Password,
+.login dt.UserName, {
+	float: left;
+	clear: both;
+	text-align: left;
+	
+}
+.login dd.Password,
+.login dd.UserName {
+	width: 90%;
+	float: left;
+	text-align: left;
+	margin: 0 auto;
+}
+
+.login p{
+	text-align: center;
+}
+
+.login input.LoginButton {
+	width: 60%;
+	margin: 12px auto 20px;
+	padding: 12px;
+}
